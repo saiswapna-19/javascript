@@ -1,202 +1,221 @@
-//section 1: variables
-//1.
-var a = 10;
-a = 15;
-console.log(a);
-//Answer: output:15
+//Task 1 – Predict the Output
+//Write the output and datatype for below:
+console.log("10" + 5);
+//output: 105 
+// data type:string
 
-//2.
-//let b = 20;
-//let b = 30;
-//console.log(b) 
-//Answer: in let variable redeclaration is not accepted.
+console.log(10 + true)
+//output:11 
+//datatype:number
 
-//3.
-const c = 50;
-console.log(c); 
-//output : 50
+console.log(false + null)
+//output:0
+//datatype: number
 
-//4.
-//const x = 10;
-//x = 20;
-//console.log(x);
-//Answer: In const variable reuse is not accepted.
+console.log("Hello" + undefined)
+//output:Helloundefined
+//datatype:string
 
-//5
-var p = 5;
-var p = 10;
-console.log(p); 
-// output :10
+console.log([1,2] + 5)
+//output:1,25
+//datatype:string
 
-//6
-let q = 25;
-q = q + 10;
-console.log(q); 
-//output :35
 
-//7.
-const r = 7;
-console.log(r + 3); 
-//output : 10
+//Task 2 – Implicit Type Casting
+//Create examples for:
+//1.	String + Number 
+console.log(typeof("swapna" +19))
+//output:swapna19
+//datatype:string
 
-//8.
-//___ a = 10; output : we can use var variable
+//2.	Boolean + Number 
+console.log(typeof(true + 19));
+//output:20
+//datatype:number
 
-//section:2 console methods
+//3.	Array + String
+console.log(typeof([1,2]+"swapna"))
+//output:1,2swapna
+//datatype:string
 
-//9.Which method prints normal output? 
-//Answer: console.log()
+//4.	Object + Number
+console.log(typeof({s:19} + 1));
+//output:[object object]1
+//datatype:string
+ 
+//5.	Null + Number 
+console.log(typeof(null+19));
+//output:19
+//datatype:number
 
-//10.	Which method shows warning?
-//Answer:console.worn()
 
-//11.	Which method shows error? 
-//Answer:console.error()
+//Task 3 – Explicit Type Casting
+//Convert the following into Number:
+//1.""500
+console.log(Number("500"))
+//output:500
 
-//12.	What does this do? 
-//console.clear();
-// Answer:Removes all previous logs, warnings, and errors from the console.
+//2.true
+console.log(Number(true))
+//output:1
 
-//section : 3 data types
-//13.
-let a1= "hello";
-console.log(typeof (a1));
-//output:string
+//3.false
+console.log(Number(false))
+//output:0
 
-//14.
-let b1 = 100;
-console.log(typeof(b1));
-//output:number
+//4.null
+console.log(Number(null))
+//output:0
 
-//15.
-let c1= false;
-console.log(typeof (c1));
-//output:boolean
+//5."abc"
+console.log(Number("abc"))
+//output:NaN
 
-//16.
-let d1;
-console.log(d1);
-//output:undefined
+//6.[100]
+console.log(Number([100]))
+//output:100
 
-//17.	
-// What is type of null? 
-//answer : null is a primitive type representing "no value" or "nothing"
 
-//18.	Convert string to number 
-let num="25"
-console.log(num)
-//output:25
+//Task 4 – Boolean Constructor
+//Check whether below values are true or false using Boolean().
+//1.""
+console.log(Boolean(""))
 
-//section:4 arrays
+//2."javascript"
+console.log(Boolean("javascript"))
 
-//19.create array of 3 fruits
-let fruit =["apple","banana","cherry"]
-console.log(fruit);
-//Answer:"apple","banana","cherry"
+//3.0
+console.log(Boolean(0))
 
-//20.
-let arr = ["a","b","c"];
-console.log(arr[1]);
-//Answer:b(arr[1] means index.index starts with 0)
+//4.1
+console.log(Boolean(1));
 
-//21.
-let arr1 = ["x","y","z"];
-console.log(arr1[arr1.length-1]);
-//Answer:z(length-1 means total length of the arr1 is 3 and -1 means we get last value of the array 3-1=2 )
+//5.null
+console.log(Boolean(null));
 
-//22.How to get first element? 
-console.log(arr1[0]);
-//Answer:x
+//6.undefined
+console.log(Boolean(undefined))
 
-//23.
-let arr2 = ["apple","banana"];
-console.log(arr2.length);
-//Answer:2
+//7.[]
+console.log(Boolean([]))
 
-//24.adding element to array
-arr2.push("cherry")
-console.log(arr2);
-//Answer:"apple","banana","cherry"
+//8.{}
+console.log(Boolean({}))
 
-//25.Create object with name & age.
 
-let details= {
-    name:"swapna",
-    age:29,
+//Task 5 – Student Pass or Fail
+let mark = 45;
+if (mark >=35){
+    console.log("student is pass")
+}else{
+    console.log("student is Fail");
+        
 }
-console.log(details);
-//Answer: ,age:29,name:"swapna"
-//26.
-let obj = {name:"swapna"}
-console.log(obj.name);
-//Answer:swapna
 
-//27.
-let obj1 = {
-  fruits: ["apple","banana"]
+
+//Task 6 – Voting Eligibility
+let age = prompt("enter your age");
+if(age>=18){
+    console.log("eligible for voting")
+}else{
+    console.log("not eligible for voting")
 }
-console.log(obj1.fruits[1]);
-//Answer:banana
-
-//28.How to access last element inside object array?
-console.log(obj1.fruits[obj1.fruits.length-1]);
-//Answer:banana
-
-//section:5 Arithmetic operators
-//29.
-console.log(5 + 3);
-//Answer:8
-
-//30.
-console.log(10 % 3);
-//answer:1
-
-//31.
-console.log(2 ** 3);
-//Answer:8
-
-//32.
-console.log(10 / 2);
-//Answer:5
-
-//section:7 increment/decrement
-//33.
-let h= 5;
-h++;
-console.log(h);
-//Answer:6 (5+1=6)
-
-//34.
-let i = 5;
-let j = i++;
-console.log(i, j);
-//Answer:(6,5) if the finding element first finds in value side means we have to calculate the entire value in value side so i=5+1=6
-//for j :the finding element first available in variable side so we have to calculate till the variable so j=i i value is 5 so j=5
-
-//35.
-let x = 5;
-let y = ++x;
-console.log(x, y);
-//Answer(6,6) finding element is x so x is first available in value side so we have to calculate entire value in valueside so x=+1+5=6 
-//the finding element first available in variable side so we have to calculate till the variable so y=+1+5=6
-
-//36.
-let m = 3;
-let n = m--;
-console.log(m, n);
-//Answer:(2,2)finding element is m so m is first available in value side so we have to calculate entire value in valueside so m=-1+3=2 
-//the finding element first available in variable side so we have to calculate till the variable so n=m and m value is 3
 
 
-//section:8 comparison & logical 
-//37.
-console.log(5 == "5");
 
-//38.
-console.log(5 === "5");
-//39.
-console.log(true && false || true);
+//Task 7 – Greatest Number
+let a = 50
+let b = 80
+let c = 30
+if (a > b && a > c) {
+    console.log("a is the greatest" ,a);
+} else if (b > a && b > c) {
+    console.log("b is the greatest", b);
+} else {
+    console.log("c is the greatest",  c);
+}
 
-//section:9 ternary
-//40.
-5 > 3 ? console.log("Yes") : console.log("No");
+
+
+//Task 8 – Traffic Light System
+//Using switch statement:
+let trafficlight = prompt("enter traffic light colour(red,yellow,green):");
+
+switch (trafficlight) {
+
+    case "red": console.log("stop your vehicle");
+
+        break;
+    case "yellow": console.log("ready your vehicle");
+    
+        break;
+    case "green": console.log("start your vehicle");
+    
+        break;
+
+    default:console.log("happy journey");
+    
+        break;
+}
+
+
+
+//Task 9 – Login System
+
+let username = "admin"
+let password = "1234"
+let inputuser = prompt("Enter username:");
+let inputpass = prompt("Enter password:");
+
+if (inputuser == username) {
+    if (inputpass == password) {
+        if(inputuser==username && inputpass==password){
+            console.log("login success");
+        }else(console.log("invalid login"))
+    } else {
+        console.log("Invalid password");
+    }
+} else {
+    console.log("Invalid username");
+}
+
+
+//Task 10 – Session Finder
+let hour = prompt("enter the hour(1-24)");
+
+if (hour >= 1 && hour <= 12) {
+    console.log("Morning");
+} else if (hour >= 13 && hour <= 15) {
+    console.log("Afternoon");
+} else if (hour >= 16 && hour <= 19) {
+    console.log("Evening");
+} else if (hour >= 20 && hour <= 24) {
+    console.log("Night");
+} else {
+    console.log("Invalid hour");
+}
+
+
+//Bonus Challenge 
+
+console.log(true + true)
+//output:2
+
+console.log("5" - 2)
+//output:3
+
+console.log("5" + 2)
+//output:52
+
+console.log(null + 1)
+//output:1
+
+console.log(undefined + 1)
+//output:NaN
+
+console.log(Boolean(" "))
+//output:true
+
+console.log(Number(true))
+//output:1
+
